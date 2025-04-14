@@ -52,6 +52,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+        arbitrage: {
+          profit: '#4ade80',
+          loss: '#f87171',
+          neutral: '#94a3b8'
+        },
+        crypto: {
+          ethereum: '#627eea',
+          binance: '#f3ba2f',
+          polygon: '#8247e5',
+          arbitrum: '#2d374b',
+          optimism: '#ff0420'
+        },
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
