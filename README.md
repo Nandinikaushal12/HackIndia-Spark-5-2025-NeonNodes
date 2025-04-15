@@ -1,53 +1,73 @@
+# Welcome to your Lovable project
 
-# Cross-Chain Profit Pilot: AI-Powered Arbitrage Bot
+## Project info
 
-A hackathon project that demonstrates an AI-powered cross-chain arbitrage bot for cryptocurrency trading. This project identifies price discrepancies across different decentralized exchanges (DEXs) on multiple blockchains and simulates the execution of profitable trades.
+**URL**: https://lovable.dev/projects/537e1b24-5a81-402a-818a-e561943ac2d2
 
-## Features
+## How can I edit this code?
 
-1. **Data Aggregation**: Simulates real-time price data from multiple DEXs across different blockchains
-2. **AI Analysis**: Visual representation of AI-driven insights on arbitrage opportunities
-3. **Trade Execution**: Mock trade execution flow that demonstrates the arbitrage process
-4. **Performance Tracking**: Visualization of trade history and profit metrics
-5. **Cross-Chain Bridging**: Simulation of cross-chain asset transfers
+There are several ways of editing your application.
 
-## Technical Stack
+**Use Lovable**
 
-- **Frontend**: React with TypeScript
-- **UI Components**: Custom components with Tailwind CSS
-- **Data Visualization**: Recharts for performance metrics
-- **State Management**: React hooks and context
-- **Styling**: Tailwind CSS with a custom dark theme optimized for trading interfaces
+Simply visit the [Lovable Project](https://lovable.dev/projects/537e1b24-5a81-402a-818a-e561943ac2d2) and start prompting.
 
-## Project Structure
+Changes made via Lovable will be committed automatically to this repo.
 
-- `/src/components` - UI components for the dashboard
-- `/src/hooks` - Custom React hooks, including the arbitrage data simulation
-- `/src/lib` - Utility functions and mock data generation
-- `/src/types` - TypeScript interfaces for arbitrage data
-- `/src/pages` - Main application pages
+**Use your preferred IDE**
 
-## How It Works (MVP Demo)
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-This project is a functional MVP that demonstrates how an AI-powered arbitrage bot would work:
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-1. **Price Discovery**: The system monitors token prices across different exchanges and blockchains
-2. **Opportunity Identification**: It identifies price differences that exceed transaction costs
-3. **Risk Assessment**: The AI component analyzes risks such as slippage and liquidity shifts
-4. **Trade Execution**: When profitable opportunities are found, trades can be executed
-5. **Performance Monitoring**: Dashboard tracks all activities and calculates profitability
+Follow these steps:
 
-## For a Production System
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
 
-To turn this MVP into a production-ready system, you would need to:
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
 
-1. Integrate with real DEX APIs or blockchain nodes for live price data
-2. Implement actual blockchain wallets and smart contracts for trade execution
-3. Train and deploy real machine learning models for risk assessment
-4. Set up secure private key management and transaction signing
-5. Add robust error handling and recovery mechanisms
-6. Implement comprehensive logging and alerting systems
+# Step 3: Install the necessary dependencies.
+npm i
 
-## Note
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
+```
 
-This is a hackathon demonstration project and not financial advice. Real arbitrage trading involves significant risks and technical challenges.
+**Edit a file directly in GitHub**
+
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
+
+**Use GitHub Codespaces**
+
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
+
+## What technologies are used for this project?
+
+This project is built with:
+
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
+
+## How can I deploy this project?
+
+Simply open [Lovable](https://lovable.dev/projects/537e1b24-5a81-402a-818a-e561943ac2d2) and click on Share -> Publish.
+
+## Can I connect a custom domain to my Lovable project?
+
+Yes, you can!
+
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
