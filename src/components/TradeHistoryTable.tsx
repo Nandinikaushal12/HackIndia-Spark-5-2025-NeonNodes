@@ -1,3 +1,4 @@
+
 import { TradeExecution } from "@/types/arbitrage";
 import { Badge } from "./ui/badge";
 import { CheckCircle2, XCircle, Clock, RefreshCw } from "lucide-react";

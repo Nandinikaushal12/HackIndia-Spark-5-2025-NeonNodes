@@ -1,3 +1,4 @@
+
 import { ArbitrageOpportunity, AIInsight } from "@/types/arbitrage"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card"
 import { Badge } from "./ui/badge"
