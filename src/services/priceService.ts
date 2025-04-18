@@ -16,18 +16,23 @@ export async function fetchTokenPrices(chain: keyof typeof supportedChains): Pro
     const response = await fetch(`${INCH_API_BASE_URL}/${chainId}/tokens`);
     const data = await response.json();
     
-    // Filter for top tokens and convert to our format
-    const relevantTokens = Object.values(data.tokens)
-      .filter((token: any) => ['ETH', 'MATIC', 'BNB', 'UNI', 'USDT'].includes(token.symbol))
-      .map((token: any) => ({
+    // Filter for top tokens
+    const relevantTokensData = Object.values(data.tokens)
+      .filter((token: any) => ['ETH', 'MATIC', 'BNB', 'UNI', 'USDT'].includes(token.symbol));
+    
+    // Process each token sequentially with proper async handling
+    const relevantTokens = await Promise.all(relevantTokensData.map(async (token: any) => {
+      const price = await fetchTokenPrice(chainId, token.address);
+      return {
         token: token.name,
         symbol: token.symbol,
-        price: await fetchTokenPrice(chainId, token.address),
+        price,
         timestamp: Date.now(),
         exchange: '1inch', // Since we're using 1inch aggregator
         chain: chain,
         logo: token.logoURI || `https://cryptologos.cc/logos/${token.symbol.toLowerCase()}-${token.symbol.toLowerCase()}-logo.png`
-      }));
+      };
+    }));
 
     return relevantTokens as TokenPrice[];
   } catch (error) {
