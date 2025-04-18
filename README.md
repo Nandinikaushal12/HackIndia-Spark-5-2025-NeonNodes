@@ -1,5 +1,5 @@
 
-#  Profit Pilot: An AI-Powered Cross-chain Arbitrage Bot
+# Cross-Chain Profit Pilot: AI-Powered Arbitrage Bot
 
 A hackathon project that demonstrates an AI-powered cross-chain arbitrage bot for cryptocurrency trading. This project identifies price discrepancies across different decentralized exchanges (DEXs) on multiple blockchains and simulates the execution of profitable trades.
 
