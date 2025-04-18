@@ -1,4 +1,5 @@
-import { ArbitrageOpportunity, AIInsight, TokenPrice, TradeExecution, BridgeTransaction } from '@/types/arbitrage';
+
+import { ArbitrageOpportunity, AIInsight, TokenPrice, TradeExecution, BridgeTransaction, Chain } from '@/types/arbitrage';
 
 // Helper function to get random number in range
 const getRandomNumber = (min: number, max: number): number => {
@@ -69,7 +70,7 @@ export const generateMockPrices = (): TokenPrice[] => {
           price,
           timestamp: Date.now(),
           exchange,
-          chain: chain as any,
+          chain: chain as Chain,
           logo: token.logo,
           volume: getRandomNumber(1000, 1000000),
           change24h: getRandomNumber(-5, 5)

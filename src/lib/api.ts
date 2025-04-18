@@ -72,13 +72,13 @@ export const fetchTokenPrices = async (): Promise<TokenPrice[]> => {
             
             // Add to our prices array
             prices.push({
-              id: `${token.symbol}-${exchange}-${chain}`,
+              id: `${token.symbol}-${exchange}-${chain}-${Date.now()}`,
               token: token.name,
               symbol: token.symbol,
               exchange,
               chain,
               price: ticker.last,
-              volume: ticker.volume, // Changed from volume24h to volume
+              volume: ticker.volume, 
               timestamp: Date.now(),
               change24h: ((ticker.last - ticker.converted_last.usd) / ticker.converted_last.usd) * 100,
               logo: `https://raw.githubusercontent.com/Uniswap/assets/master/blockchains/ethereum/assets/0x${Math.random().toString(16).substring(2, 10)}/logo.png`,
@@ -149,7 +149,7 @@ export const findArbitrageOpportunities = (prices: TokenPrice[]): ArbitrageOppor
             targetExchange: target.exchange,
             sourceChain: source.chain,
             targetChain: target.chain,
-            priceDifference: priceDiffPercent, // Renamed from priceDifferencePercent
+            priceDifference: priceDiffPercent,
             profitPotential: netProfit,
             logo: source.logo,
             riskScore: Math.floor(Math.random() * 70) + 15, // Random risk between 15-85
