@@ -9,7 +9,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "vite build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "build:dev": "vite build --mode development"
+
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
