@@ -1,5 +1,6 @@
 
 export interface TokenPrice {
+  id: string;
   token: string;
   symbol: string;
   price: number;
@@ -7,6 +8,8 @@ export interface TokenPrice {
   exchange: string;
   chain: Chain;
   logo: string;
+  volume?: number;
+  change24h?: number;
 }
 
 export interface ArbitrageOpportunity {
