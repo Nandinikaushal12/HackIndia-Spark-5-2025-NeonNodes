@@ -1,7 +1,7 @@
-
 import { MoonIcon, SunIcon } from "lucide-react"
 import { Button } from "./ui/button"
 import { useTheme } from "@/hooks/use-theme"
+import WalletConnector from "@/components/ui/WalletConnector";
 
 export const Header = () => {
   const { theme, setTheme } = useTheme()
@@ -28,6 +28,7 @@ export const Header = () => {
           )}
           <span className="sr-only">Toggle theme</span>
         </Button>
+        <WalletConnector />
       </div>
     </header>
   )
