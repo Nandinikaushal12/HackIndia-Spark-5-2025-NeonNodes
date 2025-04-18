@@ -1,4 +1,3 @@
-
 import { ArbitrageOpportunity, AIInsight, TokenPrice, TradeExecution, BridgeTransaction } from '@/types/arbitrage';
 
 // Helper function to get random number in range
@@ -64,13 +63,16 @@ export const generateMockPrices = (): TokenPrice[] => {
         const price = basePrice * (1 + variance);
         
         prices.push({
+          id: `${token.symbol}-${exchange}-${chain}-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
           token: token.name,
           symbol: token.symbol,
           price,
           timestamp: Date.now(),
           exchange,
           chain: chain as any,
-          logo: token.logo
+          logo: token.logo,
+          volume: getRandomNumber(1000, 1000000),
+          change24h: getRandomNumber(-5, 5)
         });
       });
     });
